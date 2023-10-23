@@ -34,10 +34,11 @@ const Page = () => {
         points: ["Interactive", "Responsive", "Conversion-Focused", "SEO-Optimized"],
         banner,
         icons: [bannerIconOne, bannerIconTwo, bannerIconThree],
-        bg: "__homeHeroGradientBg",
-        btnBg: "bg-[#7F6CC7]",
-        btnBorder: "border-[#7F6CC7]",
-        btnHover: "hover:bg-[#7F6CC7]"
+        // bg: "__homeHeroGradientBg",
+        btnBg: "bg-[#ca4140]",
+        btnBorder: "border-[#ca4140]",
+        btnHover: "hover:bg-[#ca4140]",
+        btnColor: "text-black"
     };
     // Array for Small Banner Component Props
     const smallbanner = {

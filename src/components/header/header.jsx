@@ -27,12 +27,12 @@ const Header = () => {
     const router = usePathname();
     const navList = (
         <ul className="lg:flex lg:items-center gap-6 lg:h-full rounded-2xl bg-black lg:bg-transparent lg:rounded-none py-5 lg:py-0 px-5 lg:px-0">
-            <li className="lg:h-full lg:flex lg:items-center"><Link href="/" className="text-lg font-medium leading-10">Home</Link></li>
-            <li className="lg:h-full lg:flex lg:items-center"><Link href="/about-us" className="text-lg font-medium leading-10">About</Link></li>
+            <li className="lg:h-full lg:flex lg:items-center"><Link href="/" className="text-lg leading-10 text-black">Home</Link></li>
+            <li className="lg:h-full lg:flex lg:items-center"><Link href="/about-us" className="text-lg leading-10 text-black">About</Link></li>
             <li className="lg:h-full lg:flex lg:items-center group relative">
-                <button href="/" className="text-lg font-medium leading-10 flex items-center gap-3">
+                <button href="/" className="text-lg leading-10 flex items-center gap-3 text-black">
                     Services
-                    <Image src={down} alt="down" className="brightness-0 invert" onClick={() => setOpenSubMenu((prev) => !prev)} />
+                    <Image src={down} alt="down" onClick={() => setOpenSubMenu((prev) => !prev)} />
                 </button>
                 <div className="lg:absolute lg:flex lg:opacity-0 lg:invisible group-hover:visible group-hover:opacity-100 top-full w-full lg:w-[600px] lg:justify-between lg:left-[-200px]  xl:left-[-100px] rounded-2xl right-0 bg-white lg:p-3 lg:mt-[-20px]">
                     <ul className="hidden lg:block w-1/2">
@@ -126,8 +126,8 @@ const Header = () => {
                     </Collapse>
                 </div>
             </li>
-            <li className="lg:h-full lg:flex lg:items-center"><Link href="/pricing" className="text-lg font-medium leading-10">Pricing/Packages</Link></li>
-            <li className="lg:h-full lg:flex lg:items-center"><Link href="/contact-us" className="text-lg font-medium leading-10">Contact</Link></li>
+            <li className="lg:h-full lg:flex lg:items-center"><Link href="/pricing" className="text-lg leading-10 text-black">Pricing/Packages</Link></li>
+            <li className="lg:h-full lg:flex lg:items-center"><Link href="/contact-us" className="text-lg leading-10 text-black">Contact</Link></li>
         </ul>
     );
     return (
@@ -141,7 +141,7 @@ const Header = () => {
                                     case '/website-design-develop-landing':
                                         return <Image src={logo2} alt="logo2" />
                                     default:
-                                        return <Image src={logo} alt="logo" />
+                                        return <Image src={logo} alt="logo" className="brightness-0" />
                                 }
                             })()}
                         </Link>
@@ -180,13 +180,13 @@ const Header = () => {
                                         case '/website-design-develop-landing':
                                             return "bg-[#3283FF] pl-4 pr-4"
                                         default:
-                                            return "bg-[#9E7DE9]"
+                                            return "bg-[#ca4140]"
                                     }
                                 })()} text-white`}
                                 hover="hover:bg-[#000000]"
                                 link="javascript:$zopim.livechat.window.show();" />
                             <Button text="(855) 888-8399"
-                                color="bg-transparent text-white"
+                                color="bg-transparent text-black"
                                 border={`border-2 ${(() => {
                                     switch (router) {
                                         case '/logo-design-company':
@@ -216,7 +216,7 @@ const Header = () => {
                                         case '/website-design-develop-landing':
                                             return "border-[#00FFEF] pl-4 pr-4"
                                         default:
-                                            return " border-[#9E7DE9]"
+                                            return " border-[#ca4140]"
                                     }
                                 })()}`}
                                 hover={`${(() => {
@@ -248,7 +248,7 @@ const Header = () => {
                                         case '/website-design-develop-landing':
                                             return "hover:bg-[#00FFEF]"
                                         default:
-                                            return "hover:bg-[#9E7DE9]"
+                                            return "hover:bg-[#ca4140] hover:text-white"
                                     }
                                 })()}`}
                                 link="tel:(855)888-8399" rounded="rounded-[100px]" />

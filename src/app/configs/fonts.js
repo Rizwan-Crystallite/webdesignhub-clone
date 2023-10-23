@@ -1,4 +1,4 @@
-import { Poppins, Pacifico } from "next/font/google";
+import { Poppins, Pacifico, Oswald, Bebas_Neue } from "next/font/google";
 import localFont from "next/font/local";
 
 const primary = Poppins({
@@ -9,15 +9,23 @@ const primary = Poppins({
     variable: '--font-primary',
 });
 
-const megatFont = localFont({
-    src: [{
-        path: '../../fonts/Megat.otf',
-        weight: '400',
-        style: 'normal',
-    }],
-    variable: '--font-megat',
-    subsets: ['latin'],
+// const megatFont = localFont({
+//     src: [{
+//         path: '../../fonts/Megat.otf',
+//         weight: '400',
+//         style: 'normal',
+//     }],
+//     variable: '--font-megat',
+//     subsets: ['latin'],
+//     display: 'swap',
+// });
+
+const megatFont = Bebas_Neue({
+    weight: ['400'],
+    style: ['normal'],
     display: 'swap',
+    subsets: ['latin'],
+    variable: '--font-megat',
 });
 
 const pacifico = Pacifico({
